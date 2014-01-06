@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" id="ng-app" ng-app="example">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular 1.2.7 <=IE9 $resource bug</title>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+    <script src="example.js"></script>
+	</head>
+	<body ng-controller="ExampleController">
+		<div>
+			<table border='1'>
+				<thead>
+					<tr>
+						<th colspan='2'><span>$http</span></th>
+					</tr>
+				</thead>
+				<tr ng-repeat="row in httpRows">
+					<td>{{row.name}}</td>
+					<td>{{row.age}}</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table border='1'>
+				<thead>
+					<tr>
+						<th colspan='2'><span>$resource w/o action</span></th>
+					</tr>
+				</thead>
+				<tr ng-repeat="row in resourceRows">
+					<td>{{row.name}}</td>
+					<td>{{row.age}}</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table border='1'>
+				<thead>
+					<tr>
+						<th colspan='2'><span>$resource w/action named query</span></th>
+					</tr>
+				</thead>
+				<tr ng-repeat="row in resource2Rows">
+					<td>{{row.name}}</td>
+					<td>{{row.age}}</td>
+				</tr>
+			</table>
+		</div>
+		<div>
+			<table border='1'>
+				<thead>
+					<tr>
+						<th colspan='2'><span>$resource w/action named elephant</span></th>
+					</tr>
+				</thead>
+				<tr ng-repeat="row in resource3Rows">
+					<td>{{row.name}}</td>
+					<td>{{row.age}}</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
